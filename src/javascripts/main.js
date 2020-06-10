@@ -1,3 +1,9 @@
 import '../styles/main.scss';
+import displayMessages from './components/messageArea';
 
-console.error('This is madeup error');
+
+const init = () => {
+  displayMessages.displayMessages();
+};
+
+init();
