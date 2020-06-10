@@ -6,12 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-<div id="maincontainer">
-<div id="header"></div>
-<div class="avatar">
-<div class="clearButton"></div>
-<div class="largeText"></div>
-<div class="darkTheme"></div>
+
+<div class="mainBody">
+
+<div id="header">
+  <img class="avatar" src="https://via.placeholder.com/100x80"></img>
+  <div class="navButtons">
+    <div class="accessibilityCheckboxes">
+      <input type="checkbox" class="largeText"> Large Text</input><br/>
+      <input type="checkbox" class="darkTheme"> Dark Side Mode</input>
+    </div>
+    <button id ="clearButton" class="btn btn-danger clearButton">Clear chat log</button>
+  </div>
 </div>
 
 <div id="messageArea">
@@ -63,6 +69,7 @@
       <label class="custom-control-label" for="customRadio5">Or toggle this other custom radio</label>
     </div>
   </div>
+</div>
 </div>
 </div>
 </body>
