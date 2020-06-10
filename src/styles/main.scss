@@ -1,4 +1,27 @@
 
 body{
-    background-color: green;
+    background-color: white;
+}
+
+#header, #inputArea {
+    display: flex;
+}
+
+#header {
+    height: 150px;
+    margin: 0 auto;
+}
+
+#messageArea {
+    height: 500px;
+    margin: 0 auto;
+}
+
+#inputArea {
+    height: 150px;
+    margin: 0 auto;
+}
+#header, #messageArea, #inputArea {
+    border: 1px solid black;
+    width: 75%
 }
