@@ -1,3 +1,5 @@
 const addMessage = () => {
-  $('#chat-area').on("keyPress", )
+  $('#chat-area').keypress(submitMessage = (msg) => {
+    $('textarea#chat-area').submit();
+  })
 }
