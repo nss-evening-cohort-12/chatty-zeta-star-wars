@@ -25,3 +25,12 @@ body{
     border: 1px solid black;
     width: 75%
 }
+
+.clearButton {
+    display: flex;
+    height: 60px;
+    width: 100px;
+    border-radius: 20px;
+    align-self: center;
+    justify-self: right;
+}
