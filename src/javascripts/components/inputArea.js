@@ -4,6 +4,7 @@ import user from '../helpers/data/userData';
 const users = user.getUserData();
 
 const pushMessage = (e) => {
+  document.getElementById('clearButton').disabled = false;
   const newMessage = e.target.value;
   let domString = '';
 
