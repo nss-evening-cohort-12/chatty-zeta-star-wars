@@ -1,3 +1,12 @@
 import '../styles/main.scss';
+import 'bootstrap';
+import displayMessages from './components/messageArea';
+import keyEvent from './components/inputArea';
 
-console.error('This is madeup error');
+
+const init = () => {
+  displayMessages.displayMessages();
+  keyEvent.eventHandler();
+};
+
+init();
