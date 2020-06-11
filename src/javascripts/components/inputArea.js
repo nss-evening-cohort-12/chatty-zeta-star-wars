@@ -1,11 +1,16 @@
+import moment from 'moment';
 import dom from '../helpers/utils';
+import messageData from '../helpers/data/messageData';
 // import user from '../helpers/data/userData';
 
 // const users = user.getUserData();
 
 const pushMessage = (e) => {
+  const timeNow = moment().format();
   const userName = document.querySelector('input[type = radio]:checked').value;
   const newMessage = e.target.value;
+  const id = e.target.id;
+
   let domString = '';
 
   domString += `

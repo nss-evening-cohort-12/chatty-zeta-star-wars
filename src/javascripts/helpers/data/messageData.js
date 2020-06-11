@@ -53,4 +53,8 @@ const messageData = [
 
 const getMessageData = () => messageData;
 
-export default { getMessageData };
+const setMessageData = (newMessage) =>{
+  messageData.push(newMessage);
+};
+
+export default { getMessageData, setMessageData };
