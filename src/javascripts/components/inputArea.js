@@ -1,7 +1,7 @@
 import dom from '../helpers/utils';
-import user from '../helpers/data/userData';
+// import user from '../helpers/data/userData';
 
-const users = user.getUserData();
+// const users = user.getUserData();
 
 const pushMessage = (e) => {
   document.getElementById('clearButton').disabled = false;
@@ -9,7 +9,7 @@ const pushMessage = (e) => {
   let domString = '';
 
   domString += `
-    <div>${users[0].name}</div>
+    <div><h4>${userName}</h4></div>
     <div>X</div>
     <div>${newMessage}</div>
     `;
@@ -21,6 +21,7 @@ const codeListener = (e) => {
 
   if (codeKey === 13) {
     pushMessage(e);
+    document.getElementById('exampleFormControlTextarea1').value = '';
   }
 };
 
