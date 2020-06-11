@@ -7,6 +7,7 @@ import messageData from '../helpers/data/messageData';
 
 const pushMessage = (e) => {
   const timeNow = moment().format();
+  document.getElementById('clearButton').disabled = false;
   const userName = document.querySelector('input[type = radio]:checked').value;
   const newMessage = e.target.value;
   const id = e.target.id;
