@@ -1,6 +1,7 @@
+import '../styles/main.scss';
 import 'bootstrap';
 import displayMessages from './components/messageArea';
-import darkMode from './components/darkMode'
+import darkMode from './components/darkMode';
 
 
 const init = () => {

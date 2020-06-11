@@ -1,16 +1,18 @@
-const activateDarkMode = () => {
-  '../styles/darkMode.scss';
+/* const activateDarkMode = () => {
+  "import '../styles/darkMode.scss'";
 };
 
 const activateLightMode = () => {
-  '../styles/main.scss';
-};
+  "import '../styles/main.scss'";
+}; */
 
 const darkModeCheckBox = () => {
   if (document.getElementById('darkTheme').checked === true) {
-    activateDarkMode();
+    /* activateDarkMode(); */
+    console.error('darkmode')
   } else {
-    activateLightMode();
+    /* activateLightMode(); */
+    console.error('lightmode')
   }
 };
 
