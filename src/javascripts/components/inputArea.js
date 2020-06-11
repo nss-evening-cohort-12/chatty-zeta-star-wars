@@ -1,13 +1,11 @@
 import dom from '../helpers/utils';
 
-const newMessage = document.getElementById('#exampleFormControlTextarea1');
-
 const pushMessage = (e) => {
-  console.error(e.target);
+  const newMessage = e.target.value;
   let domString = '';
 
   domString += `
-    <div>${newMessage().value}</div>
+    <div>${newMessage}</div>
     `;
   dom.printToDom('#messageArea', domString);
 };
