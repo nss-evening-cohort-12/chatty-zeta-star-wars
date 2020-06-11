@@ -5,6 +5,7 @@ import dom from '../helpers/utils';
 
 const pushMessage = (e) => {
   document.getElementById('clearButton').disabled = false;
+  const userName = document.querySelector('input[type = radio]:checked').value;
   const newMessage = e.target.value;
   let domString = '';
 
