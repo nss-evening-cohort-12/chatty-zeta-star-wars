@@ -9,8 +9,10 @@ const activateLightMode = () => {
 const darkModeCheckBox = () => {
   if (document.getElementById('darkTheme').checked === true) {
     document.getElementById('viewMode').href = 'darkMode.css';
+    console.error('darkmode');
   } else {
-    document.getElementById('viewMode').href = 'darkMode.css';
+    document.getElementById('viewMode').href = 'main.css';
+    console.error('lightmode');
   }
 };
 
