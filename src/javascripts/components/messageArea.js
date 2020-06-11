@@ -4,6 +4,12 @@ import utils from '../helpers/utils';
 
 const messages = messagedata.getMessageData();
 
+const messageLimit = () => {
+  if (messages.length > 19) {
+    messages.splice(0, 1);
+  }
+};
+
 const displayMessages = () => {
   let domString = '<div id="messageArea>';
 
@@ -19,6 +25,7 @@ const displayMessages = () => {
   domString += '</div>';
 
   utils.printToDom('#messageArea', domString);
+  messageLimit();
 };
 
 

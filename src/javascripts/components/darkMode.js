@@ -4,7 +4,7 @@
 
 const activateLightMode = () => {
   "import '../styles/main.scss'";
-}; */
+};
 
 const darkModeCheckBox = () => {
   if (document.getElementById('darkTheme').checked === true) {
@@ -21,3 +21,5 @@ const darkModeChecked = () => {
 };
 
 export default { darkModeChecked, darkModeCheckBox };
+
+DARK MODE */
