@@ -1,3 +1,4 @@
+import moment from 'moment';
 import messagedata from '../helpers/data/messageData';
 import utils from '../helpers/utils';
 
@@ -7,9 +8,10 @@ const displayMessages = () => {
   let domString = '<div id="messageArea>';
 
   for (let i = 0; i < messages.length; i += 1) {
+    const cleanTime = moment(messages[i].timestamp).format('MMMM Do YYYY, h:mm:ss a');
     domString += `
-                <h2 class="${messages[i].user.name}">${messages[i].user.name}</h2>
-                <h6 class="timestamp>${messages[i].timestamp}</h6>
+                <h2 class="${messages[i].userId}">${messages[i].userId}</h2>
+                <h6 class="timestamp">${cleanTime}</h6>
                 <p class="delete">X</p>
                 <p class="message">${messages[i].body}</P>                    
                 `;

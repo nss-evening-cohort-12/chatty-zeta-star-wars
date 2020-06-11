@@ -1,25 +1,29 @@
 import moment from 'moment';
-import dom from '../helpers/utils';
 import messageData from '../helpers/data/messageData';
+import displayMessages from './messageArea';
 // import user from '../helpers/data/userData';
 
 // const users = user.getUserData();
-
+let messageId = 6;
 const pushMessage = (e) => {
-  const timeNow = moment().format();
   document.getElementById('clearButton').disabled = false;
-  const userName = document.querySelector('input[type = radio]:checked').value;
-  const newMessage = e.target.value;
-  const id = e.target.id;
+  // new Message object to push this in to messageData
+  const newMessage = {};
+  const timeNow = moment().format();
+  // const userName = document.querySelector('input[type = radio]:checked').value;
+  const userId = document.querySelector('input[type = radio]:checked').id;
+  const messageBody = e.target.value;
 
-  let domString = '';
+  newMessage.id = messageId;
+  newMessage.timestamp = timeNow;
+  newMessage.body = messageBody;
+  newMessage.userId = userId;
+  // Called the function to push newMessage obj in to messageData
+  messageData.setMessageData(newMessage);
 
-  domString += `
-    <div><h4>${userName}</h4></div>
-    <div>X</div>
-    <div>${newMessage}</div>
-    `;
-  dom.printToDom('#messageArea', domString);
+  messageId += 1;
+
+  displayMessages.displayMessages();
 };
 
 const codeListener = (e) => {
