@@ -1,28 +1,28 @@
 const userData = [
   {
     id: 1,
-    name: 'Name goes here',
-    profilePicture: 'image goes here',
+    name: 'obi1Kenobi',
+    // profilePicture: 'image goes here',
   },
   {
     id: 2,
-    name: 'Name goes here',
-    profilePicture: 'image goes here',
+    name: 'TheHighGround',
+    // profilePicture: 'image goes here',
   },
   {
     id: 3,
-    name: 'Name goes here',
-    profilePicture: 'image goes here',
+    name: 'hanShotFirst2019',
+    // profilePicture: 'image goes here',
   },
   {
     id: 4,
-    name: 'Name goes here',
-    profilePicture: 'image goes here',
+    name: 'jar-jarSuck2020',
+    // profilePicture: 'image goes here',
   },
   {
     id: 5,
-    name: 'Name goes here',
-    profilePicture: 'image goes here',
+    name: 'darksidehasCOOKI3S',
+    // profilePicture: 'image goes here',
   },
 ];
 
