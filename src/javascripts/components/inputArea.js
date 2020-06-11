@@ -1,14 +1,15 @@
 import dom from '../helpers/utils';
-import user from '../helpers/data/userData';
+// import user from '../helpers/data/userData';
 
-const users = user.getUserData();
+// const users = user.getUserData();
 
 const pushMessage = (e) => {
+  const userName = document.querySelector('input[type = radio]:checked').value;
   const newMessage = e.target.value;
   let domString = '';
 
   domString += `
-    <div>${users[0].name}</div>
+    <div><h4>${userName}</h4></div>
     <div>X</div>
     <div>${newMessage}</div>
     `;
@@ -20,6 +21,7 @@ const codeListener = (e) => {
 
   if (codeKey === 13) {
     pushMessage(e);
+    document.getElementById('exampleFormControlTextarea1').value = '';
   }
 };
 
