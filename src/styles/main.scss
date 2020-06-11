@@ -1,7 +1,8 @@
 @import "~bootstrap/scss/bootstrap";
+@import 'styles';
 
 body{
-    background-color: #ffffff;
+    background-color: $white;
     background-image: url("https://i0.wp.com/windowscustomization.com/wp-content/uploads/2019/04/Starfield.gif?fit=768%2C432&quality=80&strip=all&ssl=1");
     background-size: 100%;
 }
@@ -14,7 +15,7 @@ body{
 #header {
     height: 100px;
     margin: 0 auto;
-    background-color: #DDDDDD;
+    background-color: $lightModeGrey;
     justify-content: space-between;
 }
 
@@ -22,8 +23,8 @@ body{
     height: 500px;
     margin: 0 auto;
     overflow-y: scroll;
-    background-color: white;
-    border: 3px solid #DDDDDD;
+    background-color: $white;
+    border: 3px solid $lightModeGrey;
     padding: 20px;
 }
 
@@ -32,7 +33,7 @@ body{
     align-items: center;
     height: 150px;
     margin: 0 auto;
-    background-color: #DDDDDD;
+    background-color: $lightModeGrey;
 }
 #header, #messageArea, #inputArea {
     width: 75%
@@ -65,4 +66,21 @@ body{
 
 textarea {
     resize: none;
+}
+
+.darkMode {
+    color: $darkModeText;
+      #header {
+        background-color: $darkModeBlack;
+    }
+    .avatar {
+        background-image: url("../assets/images/newlogo.png");
+    }
+    #messageArea {
+        background-color: $darkModeClearGrey;
+        border: 3px solid $darkModeBlack;
+    }
+    #inputArea {
+        background-color: $darkModeBlack;
+    }
 }

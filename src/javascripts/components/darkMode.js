@@ -4,15 +4,13 @@
 
 const activateLightMode = () => {
   "import '../styles/main.scss'";
-};
+}; */
 
 const darkModeCheckBox = () => {
   if (document.getElementById('darkTheme').checked === true) {
-    document.getElementById('viewMode').href = 'darkMode.css';
-    console.error('darkmode');
+    document.getElementById('mainBody').classList.add('darkMode');
   } else {
-    document.getElementById('viewMode').href = 'main.css';
-    console.error('lightmode');
+    document.getElementById('mainBody').classList.remove('darkMode');
   }
 };
 
@@ -21,5 +19,3 @@ const darkModeChecked = () => {
 };
 
 export default { darkModeChecked, darkModeCheckBox };
-
-DARK MODE */
