@@ -10,7 +10,7 @@ const pushMessage = (e) => {
   let domString = '';
 
   domString += `
-    <div>
+    <div id="messages">
     <div><h4>${userName}</h4></div>
     <div>X</div>
     <p>${newMessage}</p>
