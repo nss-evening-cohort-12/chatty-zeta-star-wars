@@ -8,12 +8,14 @@ const activateLightMode = () => {
 
 const darkModeCheckBox = () => {
   if (document.getElementById('darkTheme').checked === true) {
-    /* activateDarkMode(); */
-    console.error('darkmode')
+    document.getElementById('viewMode').href = 'darkMode.css';
   } else {
-    /* activateLightMode(); */
-    console.error('lightmode')
+    document.getElementById('viewMode').href = 'darkMode.css';
   }
 };
 
-export default { darkModeCheckBox };
+const darkModeChecked = () => {
+  $('#darkTheme').click(darkModeCheckBox);
+};
+
+export default { darkModeChecked, darkModeCheckBox };

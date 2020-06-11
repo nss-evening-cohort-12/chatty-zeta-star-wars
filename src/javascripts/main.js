@@ -1,12 +1,15 @@
 import '../styles/main.scss';
 import 'bootstrap';
 import displayMessages from './components/messageArea';
-import darkMode from './components/darkMode';
+import keyEvent from './components/inputArea';
+/* import darkMode from './components/darkMode'; */
 
 
 const init = () => {
   displayMessages.displayMessages();
-  darkMode.darkModeCheckBox();
+  /* darkMode.darkModeChecked();
+  darkMode.darkModeCheckBox(); */
+  keyEvent.eventHandler();
 };
 
 init();
