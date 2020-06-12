@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zeta Chat</title>
+    <link id='viewMode' rel='styleSheet'>
 </head>
 <body>
-
-<div class="mainBody">
+<div id="mainBody" class="mainBody">
 
 <div id="header">
-  <!-- <img class="avatar" src="./assets/images/newlogo.png"></img> -->
-  <div class="avatar"></div>
+  <img class="avatar"></img>
   <div class="navButtons">
     <div class="accessibilityCheckboxes">
       <input type="checkbox" class="largeText"> Large Text</input><br/>
-      <input type="checkbox" class="darkTheme"> Dark Side Mode</input>
+      <input type="checkbox" class="darkTheme" id="darkTheme"> Dark Side Mode</input>
     </div>
     <button id ="clearButton" class="btn btn-danger clearButton">Clear chat log</button>
   </div>
@@ -46,7 +45,7 @@
 </div>
 <div id="inputArea">
   <div class="messageInput">
-    <input class="form-control" id="exampleFormControlTextarea1" rows="4"></input>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
   <div class="selectUsers">
     <div class="custom-control custom-radio">
