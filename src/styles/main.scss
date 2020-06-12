@@ -1,5 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
 @import 'styles';
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
 
 body{
     background-color: $white;
@@ -64,6 +65,17 @@ body{
     padding: 0px 10px;  
 }
 
+.messageHead {
+    display: flex;
+}
+
+.userName {
+    margin-right: 15px;
+}
+
+.timestamp {
+    margin-right: 25px;
+}
 textarea {
     resize: none;
 }
