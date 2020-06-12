@@ -9,7 +9,7 @@ const pushMessage = (e) => {
   document.getElementById('clearButton').disabled = false;
   // new Message object to push this in to messageData
   const newMessage = {};
-  const timeNow = moment().format();
+  const timeNow = moment().subtract(5000, 'years');
   // const userName = document.querySelector('input[type = radio]:checked').value;
   const userId = document.querySelector('input[type = radio]:checked').id;
   const messageBody = e.target.value;
