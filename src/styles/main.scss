@@ -65,6 +65,10 @@ body{
     padding: 0px 10px;  
 }
 
+.delete {
+    cursor: pointer;
+}
+
 .messageHead {
     display: flex;
 }
@@ -89,6 +93,9 @@ body{
 textarea {
     resize: none;
 }
+.line{
+    background-color: yellow;
+}
 
 .darkMode {
     color: $darkModeText;
@@ -105,6 +112,7 @@ textarea {
     #inputArea {
         background-color: $darkModeBlack;
     }
+
     ::-webkit-scrollbar {
         height: 14px;
         width: 8px; 
