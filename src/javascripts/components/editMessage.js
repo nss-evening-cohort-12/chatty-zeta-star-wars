@@ -1,5 +1,5 @@
 import messageData from '../helpers/data/messageData';
-
+import inputArea from './inputArea';
 
 const editMessage = (e) => {
   if (e.target.classList.contains('edit')) {
@@ -8,7 +8,8 @@ const editMessage = (e) => {
     console.error(Number(e.target.id) - 1);
     console.error(item);
     console.error(messages[item].body);
-    document.querySelector('#exampleFormControlTextarea1').innerText = messages[item].body;
+    inputArea.eventHandler();
+    document.querySelector('#exampleFormControlTextarea1').innerHTML = 'Nikhil';
   }
 };
 
