@@ -9,7 +9,7 @@ const editMessage = (e) => {
     console.error(Number(e.target.id) - 1);
     console.error(item);
     console.error(messages[item].body);
-    document.querySelector('#exampleFormControlTextarea1').innerText = item;
+    document.querySelector('#exampleFormControlTextarea1').innerText = messages[item].body;
     inputArea.eventHandler();
   }
 };
