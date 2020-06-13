@@ -5,6 +5,7 @@ import clear from './components/clearBtn';
 import darkMode from './components/darkMode';
 import deleteMessage from './components/deleteMessage';
 import largetext from './components/changeCss';
+import bot from './components/chatbot';
 import '../styles/main.scss';
 
 const init = () => {
@@ -14,6 +15,7 @@ const init = () => {
   darkMode.darkModeChecked();
   deleteMessage.eventHandler();
   largetext.largeTextChecked();
+  bot.yodaBot();
 };
 
 init();
