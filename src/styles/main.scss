@@ -62,7 +62,7 @@ body{
 
 .messageInput {
     width: 70%;
-    padding: 0px 10px;  
+    margin: 0px 25px;  
 }
 
 .delete {
@@ -93,6 +93,11 @@ body{
 textarea {
     resize: none;
 }
+
+#emoji-button {
+    float: right;
+}
+
 .line{
     background-color: yellow;
 }
