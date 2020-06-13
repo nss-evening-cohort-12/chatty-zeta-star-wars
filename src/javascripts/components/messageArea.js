@@ -14,13 +14,13 @@ const displayMessages = () => {
   let domString = '<div id="messageArea>';
 
   for (let i = 0; i < messages.length; i += 1) {
-    const cleanTime = moment(messages[i].timestamp).format('MMMM Do YYYY, h:mm:ss a');
+    const cleanTime = moment(messages[i].timestamp).format('MMMM Do, h:mm a');
     domString += `
                 <div class="newMessage">
-                <div class="messageHead">
-                <h5 class="userName">${messages[i].userId}</h5>
-                <h6 class="timestamp">${cleanTime}</h6>
-                <p class="delete"><i class="fas fa-times-circle"></i></p>
+                <div class="messageHead mb-0">
+                <p class="userName mb-0">${messages[i].userId}</p>
+                <h6 class="timestamp mb-0">${cleanTime}</h6>
+                <p class="delete mb-0"><i class="fas fa-times-circle"></i></p>
                 </div>
                 <div class="messageBody">
                 <p class="message">${messages[i].body}</P>                    
@@ -31,6 +31,5 @@ const displayMessages = () => {
   utils.printToDom('#messageArea', domString);
   messageLimit();
 };
-
 
 export default { displayMessages };

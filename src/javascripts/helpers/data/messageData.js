@@ -14,19 +14,19 @@ const messageData = [
   {
     id: 3,
     timestamp: 'Fri Jun 12 2020 17:46:02 GMT-0500 (Central Daylight Time)',
-    body: 'Message goes here',
+    body: 'Greedo shoots at Han and misses, without explanation, from point-blank range, and then Han shoots him. ',
     userId: 'hanShotFirst2019',
   },
   {
     id: 4,
     timestamp: 'Fri Jun 12 2020 17:59:13 GMT-0500 (Central Daylight Time)',
-    body: 'Message Goes Here',
+    body: 'The character was completely unbelievable. Unlike Threepio, Jar Jar had zero core competencies. He was good at absolutely nothing.',
     userId: 'jar-jarSuck2020',
   },
   {
     id: 5,
     timestamp: 'Fri Jun 12 2020 18:02:32 GMT-0500 (Central Daylight Time)',
-    body: 'Message goes here',
+    body: 'Why wouldn\'t you come? You know it\'s more fun. Vader made fresh chocolate chip cookies. Come. Now.',
     userId: 'darksidehasCOOKI3S',
   },
 ];
