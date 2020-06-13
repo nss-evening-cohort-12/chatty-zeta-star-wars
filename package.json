@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
+    "@joeattardi/emoji-button": "^3.1.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "firebase": "^7.15.0",
