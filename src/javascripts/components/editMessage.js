@@ -1,5 +1,4 @@
 import messageData from '../helpers/data/messageData';
-import inputArea from './inputArea';
 
 
 const editMessage = (e) => {
@@ -10,7 +9,6 @@ const editMessage = (e) => {
     console.error(item);
     console.error(messages[item].body);
     document.querySelector('#exampleFormControlTextarea1').innerText = messages[item].body;
-    inputArea.eventHandler();
   }
 };
 
