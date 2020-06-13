@@ -6,6 +6,7 @@ import darkMode from './components/darkMode';
 import deleteMessage from './components/deleteMessage';
 import largetext from './components/changeCss';
 import '../styles/main.scss';
+import editMessage from './components/editMessage';
 
 const init = () => {
   displayMessages.displayMessages();
@@ -14,6 +15,7 @@ const init = () => {
   darkMode.darkModeChecked();
   deleteMessage.eventHandler();
   largetext.largeTextChecked();
+  editMessage.eventHandler();
 };
 
 init();

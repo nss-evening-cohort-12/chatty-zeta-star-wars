@@ -23,6 +23,7 @@ const displayMessages = () => {
                 <div class="messageHead mb-0">
                 <p class="userName mb-0 ${messages[i].userId}">${messages[i].userId}</p>
                 <h6 class="timestamp mb-0">${cleanTime}</h6>
+                <span class="mb-0 mr-2"><i id="${messages[i].id}" class="edit far fa-edit" ></i></span>
                 <span class="delete mb-0"><i id="${messages[i].id}" class="delete fas fa-times-circle"></i></span>
                 </div>
                 <div class="messageBody">
