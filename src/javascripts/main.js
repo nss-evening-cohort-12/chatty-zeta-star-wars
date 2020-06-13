@@ -1,4 +1,5 @@
 import 'bootstrap';
+import emojiPicker from './components/emojiPicker';
 import displayMessages from './components/messageArea';
 import keyEvent from './components/inputArea';
 import clear from './components/clearBtn';
@@ -14,6 +15,7 @@ const init = () => {
   darkMode.darkModeChecked();
   deleteMessage.eventHandler();
   largetext.largeTextChecked();
+  emojiPicker.button();
 };
 
 init();
