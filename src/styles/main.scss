@@ -69,8 +69,14 @@ body{
     cursor: pointer;
 }
 
+.userAvatar { 
+    width:40px;
+    margin-right: 10px;
+}
 .messageHead {
     display: flex;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
 .userName {
