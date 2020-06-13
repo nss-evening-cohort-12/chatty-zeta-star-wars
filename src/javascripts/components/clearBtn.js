@@ -8,7 +8,7 @@ let newMess = messages;
 const clearMsg = () => {
   document.querySelector('#messageArea').innerHTML = '';
   newMess = [];
-  console.error(newMess);
+  data.clearMessageData();
   if ($('#messageArea').text().length <= 0) {
     document.getElementById('clearButton').disabled = true;
   }

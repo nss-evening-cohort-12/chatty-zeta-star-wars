@@ -37,4 +37,8 @@ const setMessageData = (newMessage) => {
   messageData.push(newMessage);
 };
 
-export default { getMessageData, setMessageData };
+const clearMessageData = () => {
+  messageData.splice(0, messageData.length);
+};
+
+export default { getMessageData, setMessageData, clearMessageData };
