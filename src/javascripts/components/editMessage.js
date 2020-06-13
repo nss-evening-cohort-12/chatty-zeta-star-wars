@@ -1,15 +1,41 @@
 import messageData from '../helpers/data/messageData';
-import inputArea from './inputArea';
+import displayMessages from './messageArea';
+
+
+const replaceMessage = (e) => {
+  console.error('asdfasdfasdf');
+  messageData.getMessageData();
+  console.error(e.target.value);
+  console.error(e.target.id);
+
+  displayMessages.displayMessages();
+};
+
+const codeListener = (e) => {
+  const codeKey = e.keyCode;
+
+  if (codeKey === 13) {
+    replaceMessage(e);
+    document.getElementById('exampleFormControlTextarea1').value = '';
+  }
+};
+const eventHandler2 = () => {
+  document.querySelector('#exampleFormControlTextarea1').addEventListener('keypress', codeListener);
+};
+
+
+const showMessageInTextArea = (body, item) => {
+  document.querySelector('.messageInput').innerHTML = `<textarea class="form-control" id="exampleFormControlTextarea1" rows="3">${body}</textarea>`;
+  console.error(body, item);
+  eventHandler2();
+};
+
 
 const editMessage = (e) => {
   if (e.target.classList.contains('edit')) {
     const messages = messageData.getMessageData();
     const item = messages.findIndex((message) => message.id === Number(e.target.id));
-    console.error(Number(e.target.id) - 1);
-    console.error(item);
-    console.error(messages[item].body);
-    inputArea.eventHandler();
-    document.querySelector('#exampleFormControlTextarea1').innerHTML = 'Nikhil';
+    showMessageInTextArea(messages[item].body, item);
   }
 };
 
