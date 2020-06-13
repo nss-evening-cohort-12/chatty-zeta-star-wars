@@ -1,6 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 @import 'styles';
-
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
 body{
     background-color: $white;
     background-image: url("https://i0.wp.com/windowscustomization.com/wp-content/uploads/2019/04/Starfield.gif?fit=768%2C432&quality=80&strip=all&ssl=1");
@@ -64,8 +65,36 @@ body{
     padding: 0px 10px;  
 }
 
+.delete {
+    cursor: pointer;
+}
+
+.messageHead {
+    display: flex;
+}
+
+.userName {
+    margin-right: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Dosis';
+}
+
+.timestamp {
+    margin-right: 25px;
+    font-size: small;
+    line-height: 2;
+}
+
+.fas {
+    color:red;
+    font-size: small;
+}
 textarea {
     resize: none;
+}
+.line{
+    background-color: yellow;
 }
 
 .darkMode {
@@ -83,12 +112,15 @@ textarea {
     #inputArea {
         background-color: $darkModeBlack;
     }
-    .line{
-        background-color: yellow;
-    }
-}
-.timestamp {
-    padding-top: 5px;
-    font-weight: 200;
-}
 
+    ::-webkit-scrollbar {
+        height: 14px;
+        width: 8px; 
+        background-color: $darkModeBlack;
+      }
+    ::-webkit-scrollbar-thumb {
+        background:yellow;
+        border-radius: 5px;
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.4); 
+      }
+    }
