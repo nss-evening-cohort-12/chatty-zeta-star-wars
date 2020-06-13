@@ -6,9 +6,9 @@ const removeMessage = (e) => {
     const messages = messagedata.getMessageData();
     const item = messages.findIndex((message) => message.id === Number(e.target.id));
     messages.splice(item, 1);
-    messages.forEach((message) => {
-      console.error(message);
-    });
+    if (messages.length === 0) {
+      document.querySelector('#messageArea').innerHTML = '';
+    }
     messageArea.displayMessages();
   }
 };

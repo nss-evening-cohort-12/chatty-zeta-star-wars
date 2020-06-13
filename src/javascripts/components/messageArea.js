@@ -17,22 +17,22 @@ const displayMessages = () => {
 
 
   for (let i = 0; i < messages.length; i += 1) {
-    const cleanTime = moment(messages[i].timestamp).format('MMMM Do YYYY, h:mm:ss a');
+    const cleanTime = moment(messages[i].timestamp).format('MMMM Do, h:mm a');
     domString += `
-                <div class="d-flex">
-                <h5  class="${messages[i].userId}">${messages[i].userId}</h5>
-                <h6 class="pl-1 timestamp">${cleanTime}</h6>
-                <button id="${messages[i].id}" class="btn btn-outline-warning btn-sm ml-auto delete">X</button>
-                </div>                                
-                <p class="message">${messages[i].body}</p>
-                <hr class="line">                    
-                `;
+                <div class="newMessage">
+                <div class="messageHead mb-0">
+                <p class="userName mb-0 ${messages[i].userId}">${messages[i].userId}</p>
+                <h6 class="timestamp mb-0">${cleanTime}</h6>
+                <span class="delete mb-0"><i id="${messages[i].id}" class="delete fas fa-times-circle"></i></span>
+                </div>
+                <div class="messageBody">
+                <p class="message">${messages[i].body}</P>                    
+                </div>
+                </div>`;
+
+    utils.printToDom('#messageArea', domString);
+    messageLimit();
   }
-  domString += '</div>';
-
-  utils.printToDom('#messageArea', domString);
-  messageLimit();
 };
-
 
 export default { displayMessages };
