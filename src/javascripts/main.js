@@ -8,6 +8,7 @@ import deleteMessage from './components/deleteMessage';
 import largetext from './components/changeCss';
 import gifs from './components/gif';
 import '../styles/main.scss';
+import editMessage from './components/editMessage';
 
 const init = () => {
   displayMessages.displayMessages();
@@ -16,6 +17,7 @@ const init = () => {
   darkMode.darkModeChecked();
   deleteMessage.eventHandler();
   largetext.largeTextChecked();
+  editMessage.eventHandler();
   emojiPicker.button();
   gifs.gifListen();
 };
