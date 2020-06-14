@@ -17,7 +17,6 @@ const displayMessages = () => {
 
 
   for (let i = 0; i < messages.length; i += 1) {
-    console.error(messages[i]);
     const cleanTime = moment(messages[i].timestamp).format('MMMM Do, h:mm a');
     domString += `
                 <div class="newMessage">
@@ -25,7 +24,7 @@ const displayMessages = () => {
                 <img class="userAvatar" src="${messages[i].avatar}">
                 <p class="userName mb-0 ${messages[i].userId}">${messages[i].userId}</p>
                 <h6 class="timestamp mb-0">${cleanTime}</h6>
-                <span class="delete mb-0"><i id="${messages[i].id}" class="delete fas fa-times-circle"></i></span>
+                <span class="delete mb-0"><i id="${messages[i].id}" class="delete fas fa-times-circle ${messages[i].userId}"></i></span>
                 </div>
                 <div class="messageBody">
                 <p class="message">${messages[i].body}</P>                    
