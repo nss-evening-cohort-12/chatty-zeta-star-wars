@@ -1,33 +1,32 @@
 import messageData from '../helpers/data/messageData';
 import displayMessages from './messageArea';
+import inputArea from './inputArea';
 
-
-const replaceMessage = (e) => {
-  console.error('asdfasdfasdf');
-  messageData.getMessageData();
-  console.error(e.target.value);
-  console.error(e.target.id);
-
-  displayMessages.displayMessages();
+const switchTextArea = () => {
+  document.querySelector('.messageInput').innerHTML = '<textarea class="form-control editText" id="exampleFormControlTextarea1" rows="3"></textarea>';
+  inputArea.eventHandler();
 };
+
 
 const codeListener = (e) => {
   const codeKey = e.keyCode;
 
   if (codeKey === 13) {
-    replaceMessage(e);
-    document.getElementById('exampleFormControlTextarea1').value = '';
+    console.error('asdfasdfasdf');
+    const messages = messageData.getMessageData();
+    const modifiedMessageindex = e.target.id;
+    const modifiedMessageBody = e.target.value;
+    messages[modifiedMessageindex].body = modifiedMessageBody;
+    displayMessages.displayMessages();
+    document.querySelector('textarea.editText').value = '';
+    switchTextArea();
   }
-};
-const eventHandler2 = () => {
-  document.querySelector('#exampleFormControlTextarea1').addEventListener('keypress', codeListener);
 };
 
 
 const showMessageInTextArea = (body, item) => {
-  document.querySelector('.messageInput').innerHTML = `<textarea class="form-control" id="exampleFormControlTextarea1" rows="3">${body}</textarea>`;
-  console.error(body, item);
-  eventHandler2();
+  document.querySelector('.messageInput').innerHTML = `<textarea class="form-control editText" id="${item}" rows="3">${body}</textarea>`;
+  document.querySelector('textarea.editText').addEventListener('keypress', codeListener);
 };
 
 
