@@ -15,7 +15,6 @@ const messageLimit = () => {
 const displayMessages = () => {
   let domString = '<div id="addedMessage">';
   const allow = document.querySelector('input[type = radio]:checked').value;
-  console.error(allow);
 
   for (let i = 0; i < messages.length; i += 1) {
     const cleanTime = moment(messages[i].timestamp).format('MMMM Do, h:mm a');
