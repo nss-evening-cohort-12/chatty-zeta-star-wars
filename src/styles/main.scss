@@ -37,7 +37,7 @@ body{
     background-color: $lightModeGrey;
 }
 #header, #messageArea, #inputArea {
-    width: 75%
+    width: 75%;
 }
 
 .avatar {
@@ -61,7 +61,7 @@ body{
 }
 
 .messageInput {
-    width: 70%;
+    width: 50%;
     margin: 0px 25px;  
 }
 
@@ -100,10 +100,16 @@ textarea {
     resize: none;
 }
 
-#emoji-button {
-    float: right;
+.emoji {
+    display: flex;
+}
+.gifSearch {
+    margin: 0px 8px 0px 25px;
 }
 
+.pleasework {
+    cursor: pointer;
+}
 .line{
     background-color: yellow;
 }
