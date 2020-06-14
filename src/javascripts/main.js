@@ -6,6 +6,7 @@ import clear from './components/clearBtn';
 import darkMode from './components/darkMode';
 import deleteMessage from './components/deleteMessage';
 import largetext from './components/changeCss';
+import gifs from './components/gif';
 import '../styles/main.scss';
 
 const init = () => {
@@ -16,6 +17,7 @@ const init = () => {
   deleteMessage.eventHandler();
   largetext.largeTextChecked();
   emojiPicker.button();
+  gifs.gifListen();
 };
 
 init();

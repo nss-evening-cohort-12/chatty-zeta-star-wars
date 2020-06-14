@@ -17,7 +17,6 @@ const displayMessages = () => {
 
 
   for (let i = 0; i < messages.length; i += 1) {
-    console.error(messages[i]);
     const cleanTime = moment(messages[i].timestamp).format('MMMM Do, h:mm a');
     domString += `
                 <div class="newMessage">
