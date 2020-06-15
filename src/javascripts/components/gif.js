@@ -12,12 +12,11 @@ const selectThisGiffy = (e) => {
   const selectedgifIndex = gifCollection.findIndex((gif) => gif.id === selectedGifId);
   console.error(selectedgifIndex);
   const selectedImgUrl = gifCollection[selectedgifIndex].images.downsized.url;
-  const domstring = `<img src="${selectedImgUrl}">`;
-  utils.printToDom('#exampleFormControlTextarea1', domstring);
+  const domstring = `<textarea class="form-control editText" id="exampleFormControlTextarea1" rows="3"><img src="${selectedImgUrl}"></textarea>`;
+  utils.printToDom('.messageInput', domstring);
   document.querySelector('.gifSearch').value = '';
   inputArea.eventHandler();
   messageArea.displayMessages();
-  inputArea.eventHandler();
 };
 
 const attachEvent = () => {
@@ -52,7 +51,7 @@ const makeGifyCards = () => {
 const testSearch = () => {
   const searchTerm = document.querySelector('.gifSearch').value;
   const api = 'https://api.giphy.com/v1/gifs/search?';
-  const apiKey = 'api_key=***api_Key***';
+  const apiKey = 'api_key=****api_key*****';
   const query = `&q=$${searchTerm}$limit=10`;
   const url = api + apiKey + query;
 
