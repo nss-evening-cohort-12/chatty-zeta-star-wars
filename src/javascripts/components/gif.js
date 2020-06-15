@@ -4,6 +4,7 @@ import messageArea from './messageArea';
 import inputArea from './inputArea';
 
 let gifCollection;
+let appendMessage;
 
 const selectThisGiffy = (e) => {
   const selectedGifId = e.target.closest('.gif-card').id;
@@ -12,7 +13,7 @@ const selectThisGiffy = (e) => {
   const selectedgifIndex = gifCollection.findIndex((gif) => gif.id === selectedGifId);
   console.error(selectedgifIndex);
   const selectedImgUrl = gifCollection[selectedgifIndex].images.downsized.url;
-  const domstring = `<textarea class="form-control editText" id="exampleFormControlTextarea1" rows="3"><img src="${selectedImgUrl}"></textarea>`;
+  const domstring = `<textarea class="form-control editText" id="exampleFormControlTextarea1" rows="3">${appendMessage}<br /><img src="${selectedImgUrl}"></textarea>`;
   utils.printToDom('.messageInput', domstring);
   document.querySelector('.gifSearch').value = '';
   inputArea.eventHandler();
@@ -49,9 +50,10 @@ const makeGifyCards = () => {
 
 
 const testSearch = () => {
+  appendMessage = document.querySelector('#exampleFormControlTextarea1').value;
   const searchTerm = document.querySelector('.gifSearch').value;
   const api = 'https://api.giphy.com/v1/gifs/search?';
-  const apiKey = 'api_key=****api_key*****';
+  const apiKey = 'api_key=**key here**';
   const query = `&q=$${searchTerm}$limit=10`;
   const url = api + apiKey + query;
 
