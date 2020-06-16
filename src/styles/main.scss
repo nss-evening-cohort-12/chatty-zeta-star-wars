@@ -1,0 +1,149 @@
+@import "~bootstrap/scss/bootstrap";
+@import 'styles';
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+body{
+    background-color: $white;
+    background-image: url("https://i0.wp.com/windowscustomization.com/wp-content/uploads/2019/04/Starfield.gif?fit=768%2C432&quality=80&strip=all&ssl=1");
+    background-size: 100%;
+}
+
+#header, #inputArea {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+#header {
+    height: 100px;
+    margin: 0 auto;
+    background-color: $lightModeGrey;
+    justify-content: space-between;
+}
+
+#messageArea {
+    height: 500px;
+    margin: 0 auto;
+    overflow-y: scroll;
+    background-color: $white;
+    border: 3px solid $lightModeGrey;
+    padding: 20px;
+}
+
+#inputArea {
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    margin: 0 auto;
+    background-color: $lightModeGrey;
+}
+#header, #messageArea, #inputArea {
+    width: 75%;
+}
+
+.avatar {
+    margin: 10px 10px;
+    height: 72px;
+    width: 118px;
+    background-image: url("../assets/images/lightlogo.png");
+}
+
+.navButtons {
+    display: flex;
+    align-items: center;
+}
+
+.clearButton {
+    height: 60%;
+    width: 40%;
+    border-radius: 30px;
+    border: solid black 2px;
+    margin-left: 20px;
+}
+
+.messageInput {
+    width: 40%;
+    margin: 0px 5px 0px 15px;
+}
+
+.delete {
+    cursor: pointer;
+}
+
+.userAvatar { 
+    width:40px;
+    margin-right: 10px;
+}
+.messageHead {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.userName {
+    margin-right: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Dosis';
+}
+
+.timestamp {
+    margin-right: 25px;
+    font-size: small;
+    line-height: 2;
+}
+
+.fas {
+    color:red;
+    font-size: small;
+}
+textarea {
+    resize: none;
+}
+
+.emoji {
+    display: flex;
+}
+
+.gifSearch {
+    width: 55%;
+    margin: 0px 8px 0px 25px;
+}
+
+.pleasework {
+    cursor: pointer;
+}
+.line{
+    background-color: yellow;
+}
+
+.darkMode {
+    color: $darkModeText;
+      #header {
+        background-color: $darkModeBlack;
+    }
+    .avatar {
+        background-image: url("../assets/images/newlogo.png");
+    }
+    #messageArea {
+        background-color: $darkModeClearGrey;
+        border: 3px solid $darkModeBlack;
+    }
+    #inputArea {
+        background-color: $darkModeBlack;
+    }
+
+    ::-webkit-scrollbar {
+        height: 14px;
+        width: 8px; 
+        background-color: $darkModeBlack;
+      }
+    ::-webkit-scrollbar-thumb {
+        background:yellow;
+        border-radius: 5px;
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.4); 
+      }
+    }
+
+    .lrgTxt {
+        font-size: x-large;
+    }
